@@ -7,4 +7,5 @@ class Product < ApplicationRecord
     message: 'Must be a URL for GIF, JPG or PNG image.'
   }
   validates :title, length: {minimum: 10}
+
 end
