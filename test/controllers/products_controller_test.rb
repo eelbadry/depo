@@ -52,6 +52,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to products_url
   end
 
+# read this test as follows: if after attempting to delete the product "two" the product count did not change then the test succeeded (products cannot be deleted if in cart)
   test "can't delete product in cart" do
     assert_difference('Product.count',0) do
       delete product_url(products(:two))
